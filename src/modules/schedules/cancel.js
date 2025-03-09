@@ -1,2 +1,3 @@
 const periods = document.querySelectorAll(".period");
-console.log(periods);
+
+// Gera evento click para cada lista (li = manhã, tarde e noite).
