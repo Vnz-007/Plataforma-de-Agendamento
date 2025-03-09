@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="./src/styles/global.css" />
+    <link rel="stylesheet" href="./src/styles/form.css" />
+    <link rel="stylesheet" href="./src/styles/schedule.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +22,7 @@
   <link rel="icon" href="scissors.png"><script defer src="main.js"></script></head>
   <body>
     <div class="container">
-      <img src="./src/assets/logo.png" alt="Logo" class="logo" />
+      <img src="src/assets/Logo.png" alt="Logo" class="logo" />
 
       <form class="form">
         <header>
@@ -37,68 +41,28 @@
 
         <span class="label">Horários</span>
         <ul id="hours" class="hours" aria-label="Horários disponíveis de manhã">
-          <!-- Exemplo: Manhã -->
+          <!-- Exemplo: Manhã
           <li data-period="morning" class="hour-period">Manhã</li>
           <li data-period="morning" value="09:00" class="hour hour-available">
             09:00
-          </li>
-          <li data-period="morning" value="10:00" class="hour hour-available">
-            10:00
-          </li>
-          <li data-period="morning" value="11:00" class="hour hour-unavailable">
-            11:00
-          </li>
-          <li data-period="morning" value="12:00" class="hour hour-available">
-            12:00
-          </li>
-          <!-- Exemplo: Tarde  -->
-          <li data-period="morning" class="hour-period">Tarde</li>
+          </li> -->
+
+          <!-- Exemplo: Tarde 
+          <li data-period="afternoon" class="hour-period">Tarde</li>
           <li
             data-period="afternoon"
             value="13:00"
             class="hour hour-unavailable"
           >
             13:00
-          </li>
-          <li
-            data-period="afternoon"
-            value="14:00"
-            class="hour hour-unavailable"
-          >
-            14:00
-          </li>
-          <li data-period="afternoon" value="15:00" class="hour hour-available">
-            15:00
-          </li>
-          <li
-            data-period="afternoon"
-            value="16:00"
-            class="hour hour-unavailable"
-          >
-            16:00
-          </li>
-          <li
-            data-period="afternoon"
-            value="17:00"
-            class="hour hour-unavailable"
-          >
-            17:00
-          </li>
-          <li data-period="afternoon" value="18:00" class="hour hour-available">
-            18:00
-          </li>
-          <!-- Exemplo: Noite -->
-          <li data-period="morning" class="hour-period">Noite</li>
+          </li> -->
+
+          <!-- Exemplo: Noite
+          <li data-period="night" class="hour-period">Noite</li>
 
           <li data-period="night" value="19:00" class="hour hour-available">
             19:00
-          </li>
-          <li data-period="night" value="20:00" class="hour hour-available">
-            20:00
-          </li>
-          <li data-period="night" value="21:00" class="hour hour-unavailable">
-            21:00
-          </li>
+          </li> -->
         </ul>
 
         <label for="client" class="label">Cliente</label>
@@ -129,16 +93,16 @@
             <span>09h-12h</span>
           </header>
           <ul id="period-morning" class="period">
-            <!-- Exemplo  -->
+            <!-- Exemplo
             <li>
               <strong>11:00</strong>
-              <span>Rodrigo Gonçalves</span>
+              <span>Vinícius Loiola</span>
               <img
                 src="./src/assets/cancel.svg"
                 alt="Cancelar"
                 class="cancel-icon"
               />
-            </li>
+            </li> -->
           </ul>
         </section>
 
@@ -149,16 +113,16 @@
             <span>13h-18h</span>
           </header>
           <ul id="period-afternoon" class="period">
-            <!-- Exemplo -->
+            <!-- Exemplo
             <li>
               <strong>14:00</strong>
-              <span>Rodrigo Gonçalves</span>
+              <span>Vinícius Loiola</span>
               <img
                 src="./src/assets/cancel.svg"
                 alt="Cancelar"
                 class="cancel-icon"
               />
-            </li>
+            </li> -->
           </ul>
         </section>
 
@@ -169,19 +133,35 @@
             <span>19h-21h</span>
           </header>
           <ul id="period-night" class="period">
-            <!-- Exemplo -->
+            <!-- Exemplo
             <li>
               <strong>19:00</strong>
-              <span>Rodrigo Gonçalves</span>
+              <span>Vinícius Loiola</span>
               <img
                 src="./src/assets/cancel.svg"
                 alt="Cancelar"
                 class="cancel-icon"
               />
-            </li>
+            </li> -->
           </ul>
         </section>
       </aside>
     </div>
+
+    <script src="src/libs/dayjs.js"></script>
+    <script src="src/modules/form/date-change.js"></script>
+    <script src="src/modules/form/hours-click.js"></script>
+    <script src="src/modules/form/hours-load.js"></script>
+    <script src="src/modules/form/submit.js"></script>
+    <script src="src/modules/schedules/cancel.js"></script>
+    <script src="src/modules/schedules/load.js"></script>
+    <script src="src/modules/schedules/show.js"></script>
+    <script src="src/modules/page-load.js"></script>
+    <script src="src/services/api-config.js"></script>
+    <script src="src/services/schedule-cancel.js"></script>
+    <script src="src/services/schedule-fetch-by-day.js"></script>
+    <script src="src/services/schedule-new.js"></script>
+    <script src="src/utils/opening-hours.js"></script>
+    <script src="src/main.js"></script>
   </body>
 </html>

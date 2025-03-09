@@ -1,11 +1,14 @@
-{
+{ 
+  "homepage": "https://Vnz-007.github.io/Plataforma-de-Agendamento",
   "name": "hairday",
   "description": "Aplicação Web de agendamento para corte de cabelo.",
   "author": "Vinícius Loiola",
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "server": "json-server --watch server.json --port 3333"
+    "server": "json-server --watch server.json --port 3333",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
