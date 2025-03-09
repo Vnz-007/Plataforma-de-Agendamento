@@ -14,7 +14,7 @@ selectedDate.value = inputToday;
 selectedDate.min = inputToday;
 
 form.onsubmit = async (event) => {
-  // Previne o comportamento padrão de carregar a p~´agina.
+  // Previne o comportamento padrão de carregar a página.
   event.preventDefault();
 
   try {
@@ -27,10 +27,11 @@ form.onsubmit = async (event) => {
     // Recupera o horário selecionado.
     const hourSelected = document.querySelector(".hour-selected");
 
-    // Recupera o horário selwcionado.
+    // Recupera o horário selecionado.
     if (!hourSelected) {
       return alert("Selecione a hora.");
     }
+
     // Recupera somente a hora.
     const [hour] = hourSelected.innerText.split(":");
 
