@@ -10,7 +10,7 @@ export function schedulesShow({ dailySchedules }) {
     // Limpa as listas (li).
     periodMorning.innerHTML = "";
     periodAfternoon.innerHTML = "";
-    periodNight = "";
+    periodNight.innerHTML = "";
 
     // Renderiza os agendamentos por períodos.
     dailySchedules.forEach((schedule) => {
@@ -18,7 +18,7 @@ export function schedulesShow({ dailySchedules }) {
       const time = document.createElement("strong");
       const name = document.createElement("span");
 
-      // Add o is do agendamento.
+      // Add o id do agendamento.
       item.setAttribute("data-id", schedule.id);
 
       time.textContent = dayjs(schedule.when).format("HH:mm");
