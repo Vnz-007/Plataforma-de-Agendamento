@@ -25,6 +25,7 @@ module.exports = {
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
       favicon: path.resolve("src", "assets", "scissors.png"),
+      logo: path.resolve("src", "assets", "src/assets/Logo.png"),
     }),
     new copyWebpackPlugin({
       patterns: [
